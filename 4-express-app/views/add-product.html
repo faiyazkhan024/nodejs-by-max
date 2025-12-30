@@ -4,33 +4,168 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Product</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Reset */
+      .app {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, sans-serif;
+        background: #f7f7f8;
+        min-height: 100vh;
+        color: #111827;
+      }
+
+      /* Header */
+      .header {
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 16px 24px;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        font-weight: 500;
+        color: #374151;
+      }
+
+      .nav-link:hover {
+        color: #10a37f;
+      }
+
+      /* Layout */
+      .main {
+        display: flex;
+        justify-content: center;
+        padding: 40px 16px;
+      }
+
+      .card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 520px;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .card-title {
+        margin: 0 0 24px;
+        text-align: center;
+        font-size: 1.6rem;
+      }
+
+      /* Form */
+      .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
+        outline: none;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus {
+        border-color: #10a37f;
+      }
+
+      .form-textarea {
+        resize: vertical;
+      }
+
+      .form-button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 12px;
+        background: #10a37f;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .form-button:hover {
+        background: #0e8f6f;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Shop</a></li>
-          <li><a href="/admin/add-product">Add Product</a></li>
+
+  <body class="app">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/">Shop</a></li>
+          <li><a class="nav-link" href="/admin/add-product">Add Product</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Add a New Product</h1>
-      <form action="/admin/add-product" method="POST">
-        <div>
-          <label for="title">Product Title:</label>
-          <input type="text" id="title" name="title" required />
-        </div>
-        <div>
-          <label for="price">Price:</label>
-          <input type="number" id="price" name="price" required />
-        </div>
-        <div>
-          <label for="description">Description:</label>
-          <textarea id="description" name="description" required></textarea>
-        </div>
-        <button type="submit">Add Product</button>
-      </form>
+
+    <main class="main">
+      <section class="card">
+        <h1 class="card-title">Add a New Product</h1>
+
+        <form action="/admin/add-product" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="title">Product Title</label>
+            <input
+              class="form-input"
+              type="text"
+              id="title"
+              name="title"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="price">Price</label>
+            <input
+              class="form-input"
+              type="number"
+              id="price"
+              name="price"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="description">Description</label>
+            <textarea
+              class="form-textarea"
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button class="form-button" type="submit">Add Product</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>

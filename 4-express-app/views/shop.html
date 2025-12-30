@@ -4,19 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
+    <style>
+      /* App */
+      .app {
+        min-height: 100vh;
+        background: #f7f7f8;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, sans-serif;
+        color: #111827;
+      }
+
+      /* Header */
+      .header {
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 16px 24px;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        font-weight: 500;
+        color: #374151;
+      }
+
+      .nav-link:hover {
+        color: #10a37f;
+      }
+
+      /* Main */
+      .main {
+        max-width: 960px;
+        margin: 40px auto;
+        padding: 0 24px;
+      }
+
+      .page-title {
+        margin-top: 0;
+        font-size: 1.8rem;
+      }
+
+      .page-description {
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+
+      /* Product placeholder */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .product-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .product-title {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .product-text {
+        color: #6b7280;
+        font-size: 0.95rem;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Shop</a></li>
-          <li><a href="/admin/add-product">Add Product</a></li>
+
+  <body class="app">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/">Shop</a></li>
+          <li><a class="nav-link" href="/admin/add-product">Add Product</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>My Product</h1>
-      <p>List of all products will go here.</p>
+
+    <main class="main">
+      <h1 class="page-title">My Products</h1>
+      <p class="page-description">List of all products will go here.</p>
+
+      <section class="product-grid">
+        <article class="product-card">
+          <h2 class="product-title">Product Title</h2>
+          <p class="product-text">Product description goes here.</p>
+        </article>
+
+        <article class="product-card">
+          <h2 class="product-title">Product Title</h2>
+          <p class="product-text">Product description goes here.</p>
+        </article>
+      </section>
     </main>
   </body>
 </html>
