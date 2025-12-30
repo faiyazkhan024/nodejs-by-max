@@ -8,6 +8,7 @@ const appRoot = require("./utils/path");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(appRoot, "public")));
 
 app.use("/admin", require("./routes/admin"));
 app.use(require("./routes/shop"));

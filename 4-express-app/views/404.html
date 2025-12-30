@@ -3,93 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 · Page Not Found</title>
-    <style>
-      .app {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #f7f7f8;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Ubuntu, sans-serif;
-        color: #111827;
-      }
-
-      .card {
-        background: #ffffff;
-        padding: 40px 48px;
-        max-width: 480px;
-        text-align: center;
-        border-radius: 20px;
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-      }
-
-      .error-code {
-        font-size: 4rem;
-        font-weight: 700;
-        color: #10a37f;
-        margin: 0;
-      }
-
-      .title {
-        margin: 8px 0 12px;
-        font-size: 1.6rem;
-      }
-
-      .description {
-        margin: 0 0 24px;
-        color: #6b7280;
-        font-size: 1rem;
-      }
-
-      .actions {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-      }
-
-      .btn {
-        padding: 12px 20px;
-        border-radius: 12px;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-      }
-
-      .btn-primary {
-        background: #10a37f;
-        color: #ffffff;
-      }
-
-      .btn-primary:hover {
-        background: #0e8f6f;
-      }
-
-      .btn-secondary {
-        background: #f3f4f6;
-        color: #111827;
-      }
-
-      .btn-secondary:hover {
-        background: #e5e7eb;
-      }
-    </style>
+    <title>404 – Page Not Found</title>
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <body class="app">
-    <main class="card">
-      <p class="error-code">404</p>
-      <h1 class="title">Page Not Found</h1>
-      <p class="description">
-        The page you are looking for doesn’t exist or may have been moved.
-        Please check the URL or return to a safe place.
-      </p>
+    <main class="main main--centered" style="height: calc(100vh - 80px)">
+      <section class="card card--centered">
+        <h1 class="error-code">404</h1>
 
-      <div class="actions">
-        <a class="btn btn-primary" href="/">Go to Shop</a>
-        <a class="btn btn-secondary" href="/admin/add-product">Add Product</a>
-      </div>
+        <h2 class="error-title">Page Not Found</h2>
+
+        <p class="error-description">
+          The page you’re looking for doesn’t exist or may have been moved.
+        </p>
+
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary">Go to Shop</a>
+          <a href="/admin/add-product" class="btn btn-secondary">
+            Add Product
+          </a>
+        </div>
+      </section>
     </main>
   </body>
 </html>
