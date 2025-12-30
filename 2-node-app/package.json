@@ -1,0 +1,14 @@
+{
+  "name": "2-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Faiyaz Khan",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
