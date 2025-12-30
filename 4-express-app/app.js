@@ -1,15 +1,15 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log("Hello from middleware 👋");
-  next();
-});
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use((req, res, next) => {
-  console.log("Hello from another middleware 👋");
-  res.send("<h1>Hello from Express.js server!</h1>");
+app.use("/admin", require("./routes/admin"));
+app.use(require("./routes/shop"));
+
+app.use((_, res) => {
+  res.status(404).send("<h1>Page Not Found</h1>");
 });
 
 app.listen(3000);
