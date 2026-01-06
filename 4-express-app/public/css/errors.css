@@ -1,0 +1,25 @@
+/*==============================
+  Error Pages
+==============================*/
+.error-code {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.error-title {
+  margin: 8px 0 12px;
+  font-size: 1.6rem;
+}
+
+.error-description {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}

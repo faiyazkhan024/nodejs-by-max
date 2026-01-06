@@ -1,0 +1,51 @@
+/*==============================
+  Card
+==============================*/
+.card {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 520px;
+  padding: 32px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.card--centered {
+  text-align: center;
+}
+
+.card-title {
+  margin: 0 0 24px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/*==============================
+  Buttons
+==============================*/
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--border-light);
+}

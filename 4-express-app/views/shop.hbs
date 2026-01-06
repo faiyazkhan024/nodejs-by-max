@@ -1,0 +1,46 @@
+<main class="main">
+  <h1 class="page-title">My Products</h1>
+
+  {{#if hasProducts}}
+    <section class="product-grid">
+      {{#each products}}
+        <article class="product-card">
+          <img
+            class="product-image"
+            src="/assets/images/product-placeholder.jpg"
+            alt="Product Title"
+          />
+
+          <h2 class="product-title">{{title}}</h2>
+          <p class="product-text">{{description}}</p>
+
+          <div class="product-footer">
+            <p class="product-price">{{price}}</p>
+            <button class="btn btn-primary product-btn">Add to Cart</button>
+          </div>
+        </article>
+      {{/each}}
+    </section>
+  {{else}}
+    <section class="no-products">
+      <div class="card card--centered no-products-card">
+        <img
+          class="no-products-image"
+          src="/assets/images/no-products.png"
+          alt="No products available"
+        />
+
+        <h2 class="card-title">No Products Yet</h2>
+
+        <p class="no-products-text">
+          Your shop is currently empty. Start by adding your first product to
+          make it visible here.
+        </p>
+
+        <a href="/admin/add-product" class="btn btn-primary">
+          Add Your First Product
+        </a>
+      </div>
+    </section>
+  {{/if}}
+</main>

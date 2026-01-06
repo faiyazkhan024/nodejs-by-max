@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pageTitle}}</title>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    {{#each css}}
+      <link rel="stylesheet" href="/css/{{this}}.css" />
+    {{/each}}
+  </head>
+
+  <body class="app">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link {{if isShop 'active'}}" href="/">Shop</a>
+          </li>
+          <li>
+            <a
+              class="nav-link {{if isAddProduct 'active'}}"
+              href="/admin/add-product"
+            >
+              Add Product
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    {{{body}}}
+  </body>
+</html>

@@ -2,16 +2,22 @@ const path = require("path");
 
 const express = require("express");
 
-const appRoot = require("../utils/path");
-
 const router = express.Router();
 
 router.get("/add-product", (_, res) => {
-  res.sendFile(path.join(appRoot, "views", "add-product.html"));
+  res.render("add-product", {
+    pageTitle: "Add Product",
+    css: ["form"],
+    isAddProduct: true,
+  });
 });
 
 router.post("/add-product", (req, res) => {
-  console.log(req.body);
+  products.push({
+    title: req.body.title,
+    description: req.body.description,
+    price: req.body.price,
+  });
   res.redirect("/");
 });
 

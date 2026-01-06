@@ -1,0 +1,87 @@
+/*==============================
+  Product Grid
+==============================*/
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/*==============================
+  Product Card
+==============================*/
+.product-card {
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/*==============================
+  Product Image
+==============================*/
+.product-image {
+  width: 100%;
+  height: inherit;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+/*==============================
+  Product Content
+==============================*/
+.product-title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.product-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/*==============================
+  Product Footer
+==============================*/
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.product-price {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.product-btn {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/*==============================
+  No Products / Empty State
+==============================*/
+.no-products {
+  display: flex;
+  justify-content: center;
+}
+
+.no-products-card {
+  max-width: 460px;
+}
+
+.no-products-image {
+  width: 90%;
+  height: inherit;
+  margin-bottom: 16px;
+}
+
+.no-products-text {
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
