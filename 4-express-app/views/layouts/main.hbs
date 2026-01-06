@@ -16,15 +16,22 @@
       <nav class="nav">
         <ul class="nav-list">
           <li>
-            <a class="nav-link {{if isShop 'active'}}" href="/">Shop</a>
+            {{#if isShop}}
+              <a class="nav-link active" href="/">Shop</a>
+            {{else}}
+              <a class="nav-link" href="/">Shop</a>
+            {{/if}}
           </li>
           <li>
-            <a
-              class="nav-link {{if isAddProduct 'active'}}"
-              href="/admin/add-product"
-            >
-              Add Product
-            </a>
+            {{#if isAddProduct}}
+              <a class="nav-link active" href="/admin/add-product">
+                Add Product
+              </a>
+            {{else}}
+              <a class="nav-link" href="/admin/add-product">
+                Add Product
+              </a>
+            {{/if}}
           </li>
         </ul>
       </nav>

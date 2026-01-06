@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const { engine } = require("express-handlebars");
 
 const appRoot = require("./utils/path");
+const { get404 } = require("./controllers/error");
 
 const app = express();
 
@@ -19,10 +20,6 @@ app.use(express.static(path.join(appRoot, "public")));
 app.use("/admin", require("./routes/admin"));
 app.use(require("./routes/shop"));
 
-app.use((_, res) => {
-  res
-    .status(404)
-    .render("404", { pageTitle: "404 – Page Not Found", css: ["errors"] });
-});
+app.use(get404);
 
 app.listen(3000);
