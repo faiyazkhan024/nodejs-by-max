@@ -5,11 +5,12 @@ const bodyParser = require("body-parser");
 const { engine } = require("express-handlebars");
 
 const appRoot = require("./utils/path");
+const hbsHelpers = require("./utils/hbsHelpers");
 const { get404 } = require("./controllers/error");
 
 const app = express();
 
-app.engine("hbs", engine({ extname: "hbs" }));
+app.engine("hbs", engine({ extname: "hbs", helpers: hbsHelpers }));
 app.set("view engine", "hbs");
 app.set("views", "views");
 app.enable("view cache");
@@ -19,7 +20,6 @@ app.use(express.static(path.join(appRoot, "public")));
 
 app.use("/admin", require("./routes/admin"));
 app.use(require("./routes/shop"));
-
 app.use(get404);
 
 app.listen(3000);
